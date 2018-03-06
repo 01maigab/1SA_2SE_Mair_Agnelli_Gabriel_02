@@ -12,7 +12,7 @@ namespace Simulation_Auto
     public partial class Form1 : Form
     {
         string marke = "w", farbe="q";
-        double ps=0,tankgrse=0,verbrauch=0,tank=0;
+        double ps=0,tankgrse=0,verbrauch=0,tank=0,fahren=0,reichweite=0;
         public Form1()
         {
             InitializeComponent();
@@ -25,9 +25,9 @@ namespace Simulation_Auto
             ps=Convert.ToDouble(txtBox_Ps.Text);
             tankgrse = Convert.ToDouble(txtBoxTankgröße.Text);
             verbrauch = Convert.ToDouble(txt_BoxVerbrauch.Text);
-       rTB_Info.Text="Marke: "+marke+"\nFarbe "+farbe+"\nPs: "+ps+"\nTankgröse: "+tankgrse+"\nVerbrauch: "+verbrauch;
+       rTB_Info.Text="Marke: "+marke+"\nFarbe "+farbe+"\nPs: "+ps+"\nTankgröse: "+tankgrse+"\nVerbrauch: "+verbrauch+"\n"+tank;
 
-  
+       progressBar1.Maximum =Convert.ToInt32( tankgrse);
         }
 
       /*  private void marke()
@@ -69,9 +69,20 @@ namespace Simulation_Auto
             tank =tank+ Convert.ToDouble(textBox1.Text);
             progressBar1.Value =Convert.ToInt32( tank);
 
+
         }
 
         private void progressBar1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmd_Fahren_Click(object sender, EventArgs e)
+        {
+            fahren = Convert.ToDouble(txt_BoxFahren.Text);
+        }
+
+        private void txt_BoxFahren_TextChanged(object sender, EventArgs e)
         {
 
         }

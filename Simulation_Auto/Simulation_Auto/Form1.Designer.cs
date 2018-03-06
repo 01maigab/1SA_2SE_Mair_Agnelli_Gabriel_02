@@ -167,6 +167,7 @@
             this.txt_BoxFahren.Name = "txt_BoxFahren";
             this.txt_BoxFahren.Size = new System.Drawing.Size(100, 20);
             this.txt_BoxFahren.TabIndex = 13;
+            this.txt_BoxFahren.TextChanged += new System.EventHandler(this.txt_BoxFahren_TextChanged);
             // 
             // cmd_Tanken
             // 
@@ -186,6 +187,7 @@
             this.cmd_Fahren.TabIndex = 15;
             this.cmd_Fahren.Text = "Fahren";
             this.cmd_Fahren.UseVisualStyleBackColor = true;
+            this.cmd_Fahren.Click += new System.EventHandler(this.cmd_Fahren_Click);
             // 
             // progressBar1
             // 
