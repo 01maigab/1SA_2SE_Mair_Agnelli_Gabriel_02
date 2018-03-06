@@ -59,6 +59,7 @@ namespace Simulation_Auto
 
         private void cmd_Tanken_Click(object sender, EventArgs e)
         {
+            tank = tank + Convert.ToDouble(textBox1.Text);
             auto();
 
 
@@ -71,6 +72,7 @@ namespace Simulation_Auto
 
         private void cmd_Fahren_Click(object sender, EventArgs e)
         {
+            fahren = Convert.ToDouble(txt_BoxFahren.Text);
             tank = tank - (fahren * verbrauch);
             auto();
         }
@@ -81,11 +83,11 @@ namespace Simulation_Auto
         }
         public void auto()
         {
-             tank =tank+ Convert.ToDouble(textBox1.Text);
+          
             
             progressBar1.Value =Convert.ToInt32( tank);
 
-             fahren = Convert.ToDouble(txt_BoxFahren.Text);
+            
 
              reichweite = tankgrse / verbrauch;
 
@@ -100,7 +102,7 @@ namespace Simulation_Auto
             verbrauch = Convert.ToDouble(txt_BoxVerbrauch.Text);
 
 
-       rTB_Info.Text="Marke: "+marke+"\nFarbe "+farbe+"\nPs: "+ps+"\nTankgröse: "+tankgrse+"\nVerbrauch: "+verbrauch+"\n"+tank+"\nReichweite:"+reichweite;
+       rTB_Info.Text="Marke: "+marke+"\nFarbe "+farbe+"\nPs: "+ps+"\nTankgröse: "+tankgrse+"\nVerbrauch: "+verbrauch+"\nTankinhalt: "+tank+"\nReichweite:"+reichweite;
 
        progressBar1.Maximum =Convert.ToInt32( tankgrse);
         }
