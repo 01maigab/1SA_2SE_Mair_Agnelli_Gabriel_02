@@ -151,6 +151,7 @@
             this.rTB_Info.Size = new System.Drawing.Size(285, 188);
             this.rTB_Info.TabIndex = 11;
             this.rTB_Info.Text = "";
+            this.rTB_Info.TextChanged += new System.EventHandler(this.rTB_Info_TextChanged);
             // 
             // textBox1
             // 

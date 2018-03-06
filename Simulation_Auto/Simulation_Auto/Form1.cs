@@ -25,7 +25,9 @@ namespace Simulation_Auto
             ps=Convert.ToDouble(txtBox_Ps.Text);
             tankgrse = Convert.ToDouble(txtBoxTankgröße.Text);
             verbrauch = Convert.ToDouble(txt_BoxVerbrauch.Text);
-        Auto: marke;
+       rTB_Info.Text="Marke: "+marke+"\nFarbe "+farbe+"\nPs: "+ps+"\nTankgröse: "+tankgrse+"\nVerbrauch: "+verbrauch;
+
+           // Auto:marke
         }
 
 
@@ -35,13 +37,18 @@ namespace Simulation_Auto
 
         class Auto{
 
-            public double tanken(double tankgrse) { 
+           // public double tanke(double tankgrse) { 
             
-            }
+          //  }
 
 
 
 
+
+        }
+
+        private void rTB_Info_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }
