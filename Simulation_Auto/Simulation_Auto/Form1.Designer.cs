@@ -41,7 +41,7 @@
             this.label__5 = new System.Windows.Forms.Label();
             this.rTB_Info = new System.Windows.Forms.RichTextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txt_BoxFahren = new System.Windows.Forms.TextBox();
             this.cmd_Tanken = new System.Windows.Forms.Button();
             this.cmd_Fahren = new System.Windows.Forms.Button();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
@@ -159,13 +159,14 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 12;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // textBox2
+            // txt_BoxFahren
             // 
-            this.textBox2.Location = new System.Drawing.Point(28, 479);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 13;
+            this.txt_BoxFahren.Location = new System.Drawing.Point(28, 479);
+            this.txt_BoxFahren.Name = "txt_BoxFahren";
+            this.txt_BoxFahren.Size = new System.Drawing.Size(100, 20);
+            this.txt_BoxFahren.TabIndex = 13;
             // 
             // cmd_Tanken
             // 
@@ -175,6 +176,7 @@
             this.cmd_Tanken.TabIndex = 14;
             this.cmd_Tanken.Text = "Tanken";
             this.cmd_Tanken.UseVisualStyleBackColor = true;
+            this.cmd_Tanken.Click += new System.EventHandler(this.cmd_Tanken_Click);
             // 
             // cmd_Fahren
             // 
@@ -200,7 +202,7 @@
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.cmd_Fahren);
             this.Controls.Add(this.cmd_Tanken);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txt_BoxFahren);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.rTB_Info);
             this.Controls.Add(this.label__5);
@@ -236,7 +238,7 @@
         private System.Windows.Forms.Label label__5;
         private System.Windows.Forms.RichTextBox rTB_Info;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txt_BoxFahren;
         private System.Windows.Forms.Button cmd_Tanken;
         private System.Windows.Forms.Button cmd_Fahren;
         private System.Windows.Forms.ProgressBar progressBar1;

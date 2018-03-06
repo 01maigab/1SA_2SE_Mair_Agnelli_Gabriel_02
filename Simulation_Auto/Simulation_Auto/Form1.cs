@@ -27,19 +27,26 @@ namespace Simulation_Auto
             verbrauch = Convert.ToDouble(txt_BoxVerbrauch.Text);
        rTB_Info.Text="Marke: "+marke+"\nFarbe "+farbe+"\nPs: "+ps+"\nTankgröse: "+tankgrse+"\nVerbrauch: "+verbrauch;
 
-           // Auto:marke
+  
         }
 
+      /*  private void marke()
+        {
+            throw new NotImplementedException();
+        }
 
+        */
         
 
 
 
         class Auto{
 
-           // public double tanke(double tankgrse) { 
+      //    public static double tanke(double tankgrse) { 
+
+
             
-          //  }
+         //   }
 
 
 
@@ -50,6 +57,16 @@ namespace Simulation_Auto
         private void rTB_Info_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmd_Tanken_Click(object sender, EventArgs e)
+        {
+            tank=txt
         }
     }
 
