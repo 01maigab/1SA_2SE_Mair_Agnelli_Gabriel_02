@@ -20,14 +20,7 @@ namespace Simulation_Auto
 
         private void cmd_Erstellen_Click(object sender, EventArgs e)
         {
-            marke=txt_BoxMarke.Text;
-            farbe = cmbo_BoxFarbe.Text;
-            ps=Convert.ToDouble(txtBox_Ps.Text);
-            tankgrse = Convert.ToDouble(txtBoxTankgröße.Text);
-            verbrauch = Convert.ToDouble(txt_BoxVerbrauch.Text);
-       rTB_Info.Text="Marke: "+marke+"\nFarbe "+farbe+"\nPs: "+ps+"\nTankgröse: "+tankgrse+"\nVerbrauch: "+verbrauch+"\n"+tank;
-
-       progressBar1.Maximum =Convert.ToInt32( tankgrse);
+            auto();
         }
 
       /*  private void marke()
@@ -66,8 +59,7 @@ namespace Simulation_Auto
 
         private void cmd_Tanken_Click(object sender, EventArgs e)
         {
-            tank =tank+ Convert.ToDouble(textBox1.Text);
-            progressBar1.Value =Convert.ToInt32( tank);
+            auto();
 
 
         }
@@ -79,12 +71,38 @@ namespace Simulation_Auto
 
         private void cmd_Fahren_Click(object sender, EventArgs e)
         {
-            fahren = Convert.ToDouble(txt_BoxFahren.Text);
+            tank = tank - (fahren * verbrauch);
+            auto();
         }
 
         private void txt_BoxFahren_TextChanged(object sender, EventArgs e)
         {
 
+        }
+        public void auto()
+        {
+             tank =tank+ Convert.ToDouble(textBox1.Text);
+            
+            progressBar1.Value =Convert.ToInt32( tank);
+
+             fahren = Convert.ToDouble(txt_BoxFahren.Text);
+
+             reichweite = tankgrse / verbrauch;
+
+             marke=txt_BoxMarke.Text;
+
+            farbe = cmbo_BoxFarbe.Text;
+
+            ps=Convert.ToDouble(txtBox_Ps.Text);
+
+            tankgrse = Convert.ToDouble(txtBoxTankgröße.Text);
+
+            verbrauch = Convert.ToDouble(txt_BoxVerbrauch.Text);
+
+
+       rTB_Info.Text="Marke: "+marke+"\nFarbe "+farbe+"\nPs: "+ps+"\nTankgröse: "+tankgrse+"\nVerbrauch: "+verbrauch+"\n"+tank+"\nReichweite:"+reichweite;
+
+       progressBar1.Maximum =Convert.ToInt32( tankgrse);
         }
     }
 

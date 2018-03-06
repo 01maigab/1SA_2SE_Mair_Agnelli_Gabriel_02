@@ -45,6 +45,9 @@
             this.cmd_Tanken = new System.Windows.Forms.Button();
             this.cmd_Fahren = new System.Windows.Forms.Button();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // cmd_Erstellen
@@ -155,7 +158,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(28, 341);
+            this.textBox1.Location = new System.Drawing.Point(12, 341);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 12;
@@ -163,7 +166,7 @@
             // 
             // txt_BoxFahren
             // 
-            this.txt_BoxFahren.Location = new System.Drawing.Point(28, 479);
+            this.txt_BoxFahren.Location = new System.Drawing.Point(15, 479);
             this.txt_BoxFahren.Name = "txt_BoxFahren";
             this.txt_BoxFahren.Size = new System.Drawing.Size(100, 20);
             this.txt_BoxFahren.TabIndex = 13;
@@ -197,11 +200,41 @@
             this.progressBar1.TabIndex = 16;
             this.progressBar1.Click += new System.EventHandler(this.progressBar1_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(120, 482);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(22, 13);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "Km";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(120, 344);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(27, 13);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "Liter";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(376, 300);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(71, 13);
+            this.label3.TabIndex = 19;
+            this.label3.Text = "Informationen";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(670, 525);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.cmd_Fahren);
             this.Controls.Add(this.cmd_Tanken);
@@ -245,6 +278,9 @@
         private System.Windows.Forms.Button cmd_Tanken;
         private System.Windows.Forms.Button cmd_Fahren;
         private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }
 
