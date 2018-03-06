@@ -66,7 +66,14 @@ namespace Simulation_Auto
 
         private void cmd_Tanken_Click(object sender, EventArgs e)
         {
-            tank=txt
+            tank =tank+ Convert.ToDouble(textBox1.Text);
+            progressBar1.Value =Convert.ToInt32( tank);
+
+        }
+
+        private void progressBar1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 
